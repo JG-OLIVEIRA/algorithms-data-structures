@@ -1,2 +1,3 @@
 # algorithms data structures
-Códigos da disciplina de algoritmos e estrutura de dados.
+
+Aqui guardo alguns códigos em c que eu produzi durante os curso de algorimo e estrutura de dados.
