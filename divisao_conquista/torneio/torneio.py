@@ -7,7 +7,6 @@ def torneio(m):
         return tabela
     elif(m % 2 != 0):
         torneio(m + 1)
-        gera_bye()
     else:
         p = m//2
         torneio(p)
@@ -39,13 +38,16 @@ def imprime_matriz(m):
             print(tabela[i][j], end = " ")
         print("")
 
-m = 2
-
-if(m % 2 == 0):
-    tabela = cria_matriz(m)
-    torneio(m)
-    imprime_matriz(m)
-else:
-    tabela = cria_matriz(m + 1)
-    torneio(m + 1)
-    imprime_matriz(m)
+#testando para casos de 2 até 14
+for i in range(2, 14):
+    m = i
+    if(m % 2 == 0):
+        tabela = cria_matriz(m)
+        torneio(m)
+        imprime_matriz(m)
+        print("\n")
+    else:
+        tabela = cria_matriz(m + 1)
+        torneio(m + 1)
+        imprime_matriz(m)
+        print("\n")
