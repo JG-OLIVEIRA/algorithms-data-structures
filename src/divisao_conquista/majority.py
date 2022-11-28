@@ -1,15 +1,9 @@
 def majority(vector, min, max):
-    if(min == max):
+    q = 0
+    for i in range(max):
+        if(vector[i] == vector[min]):
+            q = q + 1
+    if(q > ((max)//2)):
         return vector[min]
-    elif(max == min + 1):
-        if(vector[min] == vector[max]):
-            return vector[min]
     else:
-        m = ((min + max)//2)
-        left = majority(vector, min, m - 1)
-        right = majority(vector, m + 1, max)
-        return vector[left] if left == right else -1
-
-vector1 = [1, 2, 1, 2, 1, 2, 1]
-
-print(majority(vector1, 0, len(vector1) - 1))
+        return majority(vector, min + 1, max)
