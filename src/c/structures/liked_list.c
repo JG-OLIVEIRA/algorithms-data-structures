@@ -1,4 +1,5 @@
-#include "./liked_list.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 node *leftStart;
 
