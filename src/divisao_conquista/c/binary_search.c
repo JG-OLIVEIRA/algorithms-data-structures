@@ -1,33 +1,8 @@
 #include "./binary_search.h"
 
-int binary_search(int *vector, int key, int min, int max)
-{
-    if (min <= max)
-    {
-        int middle = (min + max) / 2;
-
-        if (key == vector[middle])
-            return middle;
-        else if (key < vector[middle])
-            return binary_search(vector, key, min, middle - 1);
-        else if (key > vector[middle])
-            return binary_search(vector, key, middle + 1, max);
-    }
-
-    return -1;
-}
-
-void print_vector(int *vector, int vector_size)
-{
-    for (int i = 0; i < vector_size; i++)
-    {
-        printf("[%d] ", vector[i]);
-    }
-}
-
 int main()
 {
-    int *vector, random_number, finded_number, vector_size;
+    int *vector, random_number, found_number, vector_size;
 
     printf("\n");
     printf("Tell a size of the vector: ");
@@ -55,11 +30,11 @@ int main()
 
     printf("\n");
     printf("Trying to find '%d'...\n", random_number);
-    finded_number = binary_search(vector, random_number, 0, vector_size);
+    found_number = binary_search(vector, random_number, 0, vector_size);
 
-    if (finded_number != -1)
+    if (found_number != -1)
     {
-        printf("Element position: %d\n", finded_number);
+        printf("Element position: %d\n", found_number);
     }
     else
     {
@@ -69,4 +44,29 @@ int main()
     printf("\n");
 
     return EXIT_SUCCESS;
+}
+
+int binary_search(int *vector, int key, int min, int max)
+{
+    if (min <= max)
+    {
+        int middle = (min + max) / 2;
+
+        if (key == vector[middle])
+            return middle;
+        else if (key < vector[middle])
+            return binary_search(vector, key, min, middle - 1);
+        else if (key > vector[middle])
+            return binary_search(vector, key, middle + 1, max);
+    }
+
+    return -1;
+}
+
+void print_vector(int *vector, int vector_size)
+{
+    for (int i = 0; i < vector_size; i++)
+    {
+        printf("[%d] ", vector[i]);
+    }
 }
