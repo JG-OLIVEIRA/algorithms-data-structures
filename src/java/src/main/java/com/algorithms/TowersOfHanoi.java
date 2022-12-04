@@ -8,6 +8,7 @@ public class TowersOfHanoi {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter the number of discs: ");
         int n = sc.nextInt();
+        sc.close();
         hanoi(n, 'A', 'B', 'C');
     }
 

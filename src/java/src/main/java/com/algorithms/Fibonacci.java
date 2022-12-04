@@ -8,6 +8,7 @@ public class Fibonacci {
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter the number of month: ");
         int number = sc.nextInt();
+        sc.close();
 
         for(int i = 1; i <= number; i++){
             System.out.println(i + " month: " + fibonacci(i));
