@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef struct node
+{
+    int value;
+    node *pNext;
+} node;
+
 node *leftStart;
 
 void initList()
