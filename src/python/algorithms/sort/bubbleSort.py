@@ -6,7 +6,7 @@ def swap(vector, a, b):
 
 def sort(vector, max):
     if max > 1:
-        for j in range(2, max + 1):
+        for j in range(1, max + 1):
             if vector[j - 1] > vector[j]:
                 swap(vector, j - 1, j)
         sort(vector, max - 1)
