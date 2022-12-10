@@ -1,4 +1,4 @@
-package com.structures;
+package com.structures.singlelinklist;
 
 public class Node  {
 
