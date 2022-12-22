@@ -1,4 +1,4 @@
-package com.structures.doublylinkedlist;
+package com.structures;
 
 public class TestDoubleLinkList {
 

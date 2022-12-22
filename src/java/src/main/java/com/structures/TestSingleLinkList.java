@@ -1,4 +1,4 @@
-package com.structures.singlelinklist;
+package com.structures;
 
 public class TestSingleLinkList {
 
@@ -41,7 +41,7 @@ public class TestSingleLinkList {
         Node p = head;
         while(p != null)
         {
-            System.out.print(p.data + "-> ");
+            System.out.print(p.getData() + "-> ");
             p = p.next;
         }
         System.out.print("End\n\n");
